@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "i-am-tanmay-patil",
     "public": "build",
     "ignore": [
       "firebase.json",
