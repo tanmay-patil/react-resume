@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/home';
 
 export default function App() {
 	return (
@@ -13,8 +14,4 @@ export default function App() {
 			</Switch>
 		</Router>
 	);
-}
-
-function Home() {
-	return <h2>Home</h2>;
 }
