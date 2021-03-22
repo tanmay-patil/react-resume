@@ -1,0 +1,23 @@
+@import 'colors';
+
+// CSS variables that will be affected by theme switch, using element-scoped naming
+:root {
+	--color-page-background: #{$dark-background};
+	--color-text: #{$white};
+}
+
+// two background-color and color properties on the <body> using the dedicated CSS variables
+body {
+	background-color: var(--color-page-background);
+	color: var(--color-text);
+}
+
+.dark-theme {
+	--color-page-background: #{$dark-background};
+	--color-text: #{$white};
+}
+
+.light-theme {
+	--color-page-background: #{$light-background};
+	--color-text: #{$white};
+}

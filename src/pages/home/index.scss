@@ -1,5 +1,6 @@
-@import '../../sass-constants/variables.scss';
+@import '../../sass-constants/mixins';
 
-body {
-	background-color: $white;
+.container {
+	height: 100vh;
+	@include flex-center;
 }
