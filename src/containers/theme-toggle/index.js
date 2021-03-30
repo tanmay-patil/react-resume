@@ -1,22 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+// import styled from 'styled-components';
+import SunIcon from '../../assets/images/theme-toggler/sun.svg';
+import MoonIcon from '../../assets/images/theme-toggler/moon.svg';
+import './index.scss';
 
-const Toggle = ({ toggleTheme }) => {
-	return <Button onClick={toggleTheme}>Switch Theme</Button>;
+const Toggle = ({ theme, toggleTheme }) => {
+	const isDarkMode = theme.text == 'white';
+
+	return (
+		<div onClick={toggleTheme}>
+			{isDarkMode ? (
+				<img className="toggle-icon cursor-pointer" src={SunIcon} />
+			) : (
+				<img className="toggle-icon cursor-pointer" src={MoonIcon} />
+			)}
+		</div>
+	);
 };
 Toggle.propTypes = {
 	theme: PropTypes.object.isRequired,
 	toggleTheme: PropTypes.func.isRequired,
 };
 export default Toggle;
-
-const Button = styled.button`
-background: ${({ theme }) => theme.background};
-border: 2px solid ${({ theme }) => theme.toggleBorder};
-color: ${({ theme }) => theme.text};
-border-radius: 30px;
-cursor: pointer;
-font-size:0.8rem;
-padding: 0.6rem;
-};`;

@@ -1,13 +1,17 @@
-import Toggle from '../../containers/theme-toggle';
 import PropTypes from 'prop-types';
 import './index.scss';
 import { emptyArrowFunction } from '../../helpers/utils';
-export default function Home({ themeToggler, theme }) {
+import TopBar from '../../containers/top-bar';
+import ThemeWrapper from '../../containers/theme-toggle/ThemeWrapper';
+export default function Home() {
 	return (
-		<div className="container">
-			TANMAY PATIL
-			<Toggle theme={theme} toggleTheme={themeToggler} />
-		</div>
+		<>
+			<ThemeWrapper>
+				<TopBar />
+			</ThemeWrapper>
+
+			<div className="container">TANMAY PATIL</div>
+		</>
 	);
 }
 

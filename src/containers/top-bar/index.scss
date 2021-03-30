@@ -1,0 +1,27 @@
+.topbar-container {
+	position: 'absolute';
+	top: 0;
+	width: 100%;
+	font-family: Futura, sans-serif;
+	padding-top: 26px;
+	padding-left: 26px;
+	display: flex;
+	align-items: center;
+	user-select: none;
+
+	.topbar-abbreviation {
+		font-size: 22px;
+	}
+
+	.topbar-firstchar {
+		margin-right: 2px;
+	}
+
+	.topbar-toggle {
+		margin-right: 32px;
+	}
+
+	.topbar-flex-grow {
+		flex-grow: 1;
+	}
+}

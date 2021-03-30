@@ -1,6 +1,9 @@
 @import '../../sass-constants/mixins';
 
 .container {
+	text-align: center;
 	height: 100vh;
 	@include flex-center;
+	font-family: Azonix;
+	font-size: 80px;
 }
