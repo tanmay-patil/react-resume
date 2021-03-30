@@ -1,16 +1,14 @@
 .topbar-container {
-	position: 'absolute';
-	top: 0;
 	width: 100%;
 	font-family: Futura, sans-serif;
-	padding-top: 26px;
-	padding-left: 26px;
 	display: flex;
 	align-items: center;
 	user-select: none;
+	padding-top: 32px;
 
 	.topbar-abbreviation {
 		font-size: 22px;
+		margin-left: 32px;
 	}
 
 	.topbar-firstchar {
