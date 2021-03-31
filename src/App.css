@@ -7,3 +7,8 @@
 	font-family: 'Azonix';
 	src: local('Azonix'), url(./assets/fonts/Azonix.otf) format('opentype');
 }
+
+@font-face {
+	font-family: 'Ninja';
+	src: local('Ninja'), url(./assets/fonts/AssassinNinja.ttf) format('opentype');
+}

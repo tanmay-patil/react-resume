@@ -1,11 +1,1 @@
 @import '../../sass-constants/mixins';
-
-.container {
-	text-align: left;
-	height: 100vh;
-	@include flex-center;
-	font-family: Azonix;
-	font-size: 80px;
-	padding-left: 32px;
-	user-select: none;
-}
