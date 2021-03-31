@@ -33,7 +33,9 @@ const PersonalIntro = () => {
 				</animated.div>
 
 				<animated.div style={propsSubtitle}>
-					<div className="personal-intro-subtitle">The JavaScript Ninja</div>
+					<div className="personal-intro-subtitle">
+						The JavaScript <span>Ninja</span>
+					</div>
 				</animated.div>
 			</div>
 		</div>

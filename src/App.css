@@ -12,3 +12,21 @@
 	font-family: 'Ninja';
 	src: local('Ninja'), url(./assets/fonts/AssassinNinja.ttf) format('opentype');
 }
+
+@font-face {
+	font-family: 'SF-Pro-Display-Thin';
+	src: local('SF-Pro-Display-Thin'),
+		url(./assets/fonts/SF-Pro-Display-Thin.otf) format('opentype');
+}
+
+@font-face {
+	font-family: 'SF-Pro-Display-Ultralight';
+	src: local('SF-Pro-Display-Ultralight'),
+		url(./assets/fonts/SF-Pro-Display-Ultralight.otf) format('opentype');
+}
+
+@font-face {
+	font-family: 'SF-Pro-Text-Light';
+	src: local('SF-Pro-Text-Light'),
+		url(./assets/fonts/SF-Pro-Text-Light.otf) format('opentype');
+}

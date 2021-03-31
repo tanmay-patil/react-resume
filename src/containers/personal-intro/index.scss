@@ -6,7 +6,6 @@
 	justify-content: center;
 
 	.personal-intro-inner-container {
-		position: relative;
 		@include flex-center;
 	}
 
@@ -16,14 +15,23 @@
 		font-size: 80px;
 		padding-left: 32px;
 		user-select: none;
-		margin-top: 25%;
+		margin-top: 40%;
 	}
 
 	.personal-intro-subtitle {
 		text-align: left;
-		font-family: Ninja;
+		font-family: SF-Pro-Display-Thin;
 		font-size: 30px;
 		padding-left: 32px;
 		user-select: none;
+
+		span {
+			font-family: Ninja;
+		}
+	}
+
+	.personal-intro-svg {
+		height: 300px;
+		width: 200px;
 	}
 }
