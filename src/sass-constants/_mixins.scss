@@ -5,3 +5,10 @@
 	justify-content: center;
 	align-items: center;
 }
+
+// Media Queries
+@mixin mobile {
+	@media (max-width: 700px) {
+		@content;
+	}
+}

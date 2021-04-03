@@ -3,27 +3,29 @@
 .personal-intro-text-container {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	@include flex-center;
 
 	.personal-intro-inner-container {
-		@include flex-center;
 	}
 
 	.personal-intro-title {
-		text-align: left;
 		font-family: Azonix;
 		font-size: 80px;
 		padding-left: 32px;
 		user-select: none;
-		margin-top: 20%;
+		margin-top: 30%;
 	}
 
 	.personal-intro-subtitle {
-		text-align: left;
+		text-align: center;
 		font-family: SF-Pro-Display-Thin;
 		font-size: 30px;
 		padding-left: 32px;
 		user-select: none;
+
+		@include mobile {
+			text-align: left;
+		}
 
 		span {
 			font-family: Ninja;

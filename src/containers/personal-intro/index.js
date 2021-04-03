@@ -19,11 +19,16 @@ const PersonalIntro = () => {
 		setIsSubtitleHovering(false);
 	};
 
+	const handleOnClick = () => {
+		setIsSubtitleHovering((val) => !val);
+	};
+
 	return (
 		<div className="personal-intro-text-container">
 			<div className="personal-intro-inner-container">
 				<div
 					className="personal-intro-title"
+					onClick={handleOnClick}
 					onMouseEnter={handleOnMouseEnter}
 					onMouseLeave={handleOnMouseLeave}
 				>
