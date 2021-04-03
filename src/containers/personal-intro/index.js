@@ -1,11 +1,19 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MotionScale from '../../components/MotionScale';
 import MotionHoverScaleDrag from '../../components/MotionHoverScaleDrag';
 import './index.scss';
+import MyName from './MyName';
 
 const PersonalIntro = () => {
 	const [isSubtitleHovering, setIsSubtitleHovering] = useState(false);
+	const [showSubtitle, setShowSubtitle] = useState(false);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setShowSubtitle(true);
+		}, 2800);
+	}, []);
 
 	const handleOnMouseEnter = () => {
 		setIsSubtitleHovering(true);
@@ -29,11 +37,11 @@ const PersonalIntro = () => {
 					onMouseLeave={handleOnMouseLeave}
 				>
 					<MotionHoverScaleDrag>
-						<span>TANMAY PATIL</span>
+						<MyName />
 					</MotionHoverScaleDrag>
 				</div>
 
-				{isSubtitleHovering && (
+				{isSubtitleHovering && showSubtitle && (
 					<MotionScale>
 						<div className="personal-intro-subtitle">
 							The JavaScript <span>Ninja</span>
@@ -41,7 +49,7 @@ const PersonalIntro = () => {
 					</MotionScale>
 				)}
 
-				{!isSubtitleHovering && (
+				{!isSubtitleHovering && showSubtitle && (
 					<MotionScale>
 						<div className="personal-intro-subtitle">
 							Full Stack Web Developer
