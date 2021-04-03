@@ -9,3 +9,5 @@ export const evaluateTernary = (subject, truthy, falsey) => {
 
 	return null;
 };
+
+export const isMobile = window.innerWidth < 800;

@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
+import { isMobile, evaluateTernary } from '../../helpers/utils';
 
 const MotionHoverScaleDrag = ({ children, scale, duration }) => {
+	const whileTapScale = evaluateTernary(isMobile, 0.9, 1);
+
 	return (
 		<motion.div
 			drag
@@ -13,7 +16,7 @@ const MotionHoverScaleDrag = ({ children, scale, duration }) => {
 				bottom: 0,
 			}}
 			whileHover={{ scale }}
-			whileTap={{ scale: 1 }}
+			whileTap={{ scale: whileTapScale }}
 			initial="hidden"
 			animate="visible"
 			transition={{ duration }}
