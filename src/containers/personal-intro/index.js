@@ -1,42 +1,52 @@
 /* eslint-disable no-unused-vars */
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 import './index.scss';
-import { useSpring, animated } from 'react-spring';
-import { useEffect, useState } from 'react';
 
 const PersonalIntro = () => {
-	const [showName, setShowName] = useState(false);
-	const [showSubtitle, setShowSubtitle] = useState(false);
-	const propsTitle = useSpring({ opacity: showName ? 1 : 0 });
-	const propsSubtitle = useSpring({ opacity: showSubtitle ? 1 : 0 });
+	const [isSubtitleHovering, setIsSubtitleHovering] = useState(false);
 
-	useEffect(() => {
-		setTimeout(() => {
-			setShowName((val) => {
-				return !val;
-			});
-		}, 1000);
-	}, []);
+	const variants = {
+		hidden: { opacity: 0 },
+		visible: { opacity: 1 },
+	};
 
-	useEffect(() => {
-		setTimeout(() => {
-			setShowSubtitle((val) => {
-				return !val;
-			});
-		}, 2000);
-	}, []);
+	const handleOnMouseEnter = () => {
+		setIsSubtitleHovering(true);
+	};
+
+	const handleOnMouseLeave = () => {
+		setIsSubtitleHovering(false);
+	};
 
 	return (
 		<div className="personal-intro-text-container">
 			<div className="personal-intro-inner-container">
-				<animated.div style={propsTitle}>
-					<div className="personal-intro-title">TANMAY PATIL</div>
-				</animated.div>
+				<div
+					className="personal-intro-title"
+					onMouseEnter={handleOnMouseEnter}
+					onMouseLeave={handleOnMouseLeave}
+				>
+					<motion.div
+						whileHover={{ scale: 1.1 }}
+						whileTap={{ scale: 0.9 }}
+						initial="hidden"
+						animate="visible"
+						variants={variants}
+					>
+						TANMAY PATIL
+					</motion.div>
+				</div>
 
-				<animated.div style={propsSubtitle}>
+				{isSubtitleHovering ? (
 					<div className="personal-intro-subtitle">
 						The JavaScript <span>Ninja</span>
 					</div>
-				</animated.div>
+				) : (
+					<div className="personal-intro-subtitle">
+						Full Stack Web Developer
+					</div>
+				)}
 			</div>
 		</div>
 	);
