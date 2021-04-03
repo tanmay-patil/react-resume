@@ -1,15 +1,11 @@
 /* eslint-disable no-unused-vars */
-import { motion } from 'framer-motion';
 import { useState } from 'react';
+import MotionScale from '../../components/MotionScale';
+import MotionHoverScaleDrag from '../../components/MotionHoverScaleDrag';
 import './index.scss';
 
 const PersonalIntro = () => {
 	const [isSubtitleHovering, setIsSubtitleHovering] = useState(false);
-
-	const variants = {
-		hidden: { opacity: 0 },
-		visible: { opacity: 1 },
-	};
 
 	const handleOnMouseEnter = () => {
 		setIsSubtitleHovering(true);
@@ -32,25 +28,25 @@ const PersonalIntro = () => {
 					onMouseEnter={handleOnMouseEnter}
 					onMouseLeave={handleOnMouseLeave}
 				>
-					<motion.div
-						whileHover={{ scale: 1.1 }}
-						whileTap={{ scale: 0.9 }}
-						initial="hidden"
-						animate="visible"
-						variants={variants}
-					>
-						TANMAY PATIL
-					</motion.div>
+					<MotionHoverScaleDrag>
+						<span>TANMAY PATIL</span>
+					</MotionHoverScaleDrag>
 				</div>
 
-				{isSubtitleHovering ? (
-					<div className="personal-intro-subtitle">
-						The JavaScript <span>Ninja</span>
-					</div>
-				) : (
-					<div className="personal-intro-subtitle">
-						Full Stack Web Developer
-					</div>
+				{isSubtitleHovering && (
+					<MotionScale>
+						<div className="personal-intro-subtitle">
+							The JavaScript <span>Ninja</span>
+						</div>
+					</MotionScale>
+				)}
+
+				{!isSubtitleHovering && (
+					<MotionScale>
+						<div className="personal-intro-subtitle">
+							Full Stack Web Developer
+						</div>
+					</MotionScale>
 				)}
 			</div>
 		</div>
