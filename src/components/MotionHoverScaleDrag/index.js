@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import { isMobile, evaluateTernary } from '../../helpers/utils';
+import { isMobile } from '../../helpers/utils';
 
 const MotionHoverScaleDrag = ({ children, scale, duration }) => {
-	const whileTapScale = evaluateTernary(isMobile, 0.9, 1);
+	const whileTapScale = isMobile ? 0.9 : 1;
 
 	return (
 		<motion.div
-			drag
+			drag={!isMobile}
 			dragConstraints={{
 				top: 0,
 				left: 0,
