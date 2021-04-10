@@ -35,7 +35,9 @@ const PersonalIntro = () => {
 					onMouseEnter={handleOnMouseEnter}
 					onMouseLeave={handleOnMouseLeave}
 				>
-					<div className="personal-intro-top-subtitle">portfolio 2021</div>
+					<div className="personal-intro-top-subtitle">
+						portfolio <b>2021</b>
+					</div>
 
 					<MotionHoverScaleDrag>
 						<MyName />
@@ -50,7 +52,7 @@ const PersonalIntro = () => {
 
 				{!isSubtitleHovering && showBottomSubtitle && (
 					<div className="personal-intro-subtitle">
-						Full Stack Web Developer
+						Full Stack <b>Web / Mobile</b> Dev
 					</div>
 				)}
 			</div>

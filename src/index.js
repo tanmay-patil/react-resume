@@ -4,9 +4,11 @@ import './index.css';
 import './index.scss'; // Contains theme import
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AnimatedCursor from './components/AnimatedCursor';
 
 ReactDOM.render(
 	<React.StrictMode>
+		<AnimatedCursor />
 		<App />
 	</React.StrictMode>,
 	document.getElementById('root')

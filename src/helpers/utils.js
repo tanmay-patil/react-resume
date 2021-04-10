@@ -10,4 +10,9 @@ export const evaluateTernary = (subject, truthy, falsey) => {
 	return null;
 };
 
-export const isMobile = window.innerWidth < 800;
+const isMobileFn = () => {
+	const ua = navigator.userAgent;
+	return /Android|Mobi/i.test(ua);
+};
+
+export const isMobile = isMobileFn();
