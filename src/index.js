@@ -5,10 +5,11 @@ import './index.scss'; // Contains theme import
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AnimatedCursor from './components/AnimatedCursor';
+import { isMobile } from './helpers/utils';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<AnimatedCursor />
+		{!isMobile && <AnimatedCursor />}
 		<App />
 	</React.StrictMode>,
 	document.getElementById('root')
