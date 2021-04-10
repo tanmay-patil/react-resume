@@ -6,7 +6,13 @@ import { isMobile } from '../../helpers/utils';
 const MyName = () => {
 	const name = 'TANMAY PATIL';
 
-	const wordBreakElement = isMobile ? <span>{'\n'}</span> : <span>&nbsp;</span>;
+	const wordBreakElement = isMobile ? (
+		<span>
+			<br></br>
+		</span>
+	) : (
+		<span>&nbsp;</span>
+	);
 
 	const variant1 = {
 		hidden: { opacity: 1, scale: 0 },

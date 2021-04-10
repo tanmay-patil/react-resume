@@ -5,28 +5,18 @@
 	flex-direction: column;
 	@include flex-center;
 
-	.personal-intro-inner-container {
-	}
-
 	.personal-intro-title {
 		font-family: Azonix;
 		font-size: 80px;
-		padding-left: 32px;
 		user-select: none;
 		margin-top: 30%;
 	}
 
 	.personal-intro-subtitle {
-		text-align: center;
+		text-align: right;
 		font-family: SF-Pro-Display-Thin;
 		font-size: 30px;
-		padding-left: 32px;
 		user-select: none;
-
-		@include mobile {
-			text-align: left;
-			padding-left: 50px;
-		}
 
 		span {
 			font-family: Ninja;
@@ -42,5 +32,12 @@
 		.my-name-list-item {
 			list-style: none;
 		}
+	}
+
+	.personal-intro-top-subtitle {
+		font-family: 'SF-Pro-Text-Light';
+		font-size: 20px;
+		margin-bottom: 20px;
+		color: rgb(122, 122, 122);
 	}
 }

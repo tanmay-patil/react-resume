@@ -8,9 +8,8 @@ export default function Home() {
 		<>
 			<ThemeWrapper>
 				<TopBar />
+				<PersonalIntro />
 			</ThemeWrapper>
-
-			<PersonalIntro />
 		</>
 	);
 }

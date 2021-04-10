@@ -1,17 +1,16 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
-import MotionScale from '../../components/MotionScale';
 import MotionHoverScaleDrag from '../../components/MotionHoverScaleDrag';
 import './index.scss';
 import MyName from './MyName';
 
 const PersonalIntro = () => {
 	const [isSubtitleHovering, setIsSubtitleHovering] = useState(false);
-	const [showSubtitle, setShowSubtitle] = useState(false);
+	const [showBottomSubtitle, setShowBottomSubtitle] = useState(false);
 
 	useEffect(() => {
 		setTimeout(() => {
-			setShowSubtitle(true);
+			setShowBottomSubtitle(true);
 		}, 2800);
 	}, []);
 
@@ -36,25 +35,23 @@ const PersonalIntro = () => {
 					onMouseEnter={handleOnMouseEnter}
 					onMouseLeave={handleOnMouseLeave}
 				>
+					<div className="personal-intro-top-subtitle">portfolio 2021</div>
+
 					<MotionHoverScaleDrag>
 						<MyName />
 					</MotionHoverScaleDrag>
 				</div>
 
-				{isSubtitleHovering && showSubtitle && (
-					<MotionScale>
-						<div className="personal-intro-subtitle">
-							The JavaScript <span>Ninja</span>
-						</div>
-					</MotionScale>
+				{isSubtitleHovering && showBottomSubtitle && (
+					<div className="personal-intro-subtitle">
+						The JavaScript <span>Ninja</span>
+					</div>
 				)}
 
-				{!isSubtitleHovering && showSubtitle && (
-					<MotionScale>
-						<div className="personal-intro-subtitle">
-							Full Stack Web Developer
-						</div>
-					</MotionScale>
+				{!isSubtitleHovering && showBottomSubtitle && (
+					<div className="personal-intro-subtitle">
+						Full Stack Web Developer
+					</div>
 				)}
 			</div>
 		</div>
