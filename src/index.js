@@ -9,7 +9,10 @@ import { isMobile } from './helpers/utils';
 
 ReactDOM.render(
 	<React.StrictMode>
+		{/* Show Animated Cursor for non-mobile devices */}
 		{!isMobile && <AnimatedCursor />}
+
+		{/* Render the rest of the app */}
 		<App />
 	</React.StrictMode>,
 	document.getElementById('root')

@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import MotionHoverScaleDrag from '../../components/MotionHoverScaleDrag';
 import './index.scss';
 import MyName from './MyName';
@@ -56,6 +57,12 @@ const PersonalIntro = () => {
 					</div>
 				)}
 			</div>
+
+			<h3>
+				<a>
+					<Link to={'/about'}>ABOUT ME</Link>
+				</a>
+			</h3>
 		</div>
 	);
 };

@@ -45,3 +45,23 @@ html,
 body {
 	cursor: none;
 }
+
+html *,
+body * {
+	cursor: none;
+	user-select: none;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+a:link {
+	text-decoration: none;
+	color: currentColor;
+}
+
+a:visited {
+	text-decoration: none;
+	color: currentColor;
+}

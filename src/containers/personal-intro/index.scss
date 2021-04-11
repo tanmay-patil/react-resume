@@ -10,6 +10,10 @@
 		font-size: 80px;
 		user-select: none;
 		margin-top: 30%;
+
+		@include mobile {
+			font-size: 70px;
+		}
 	}
 
 	.personal-intro-subtitle {
@@ -20,6 +24,10 @@
 
 		span {
 			font-family: Ninja;
+		}
+
+		@include mobile {
+			font-size: 25px;
 		}
 	}
 

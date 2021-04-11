@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import './App.css';
+import './fonts.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Home from './pages/home';
