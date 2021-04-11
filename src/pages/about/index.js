@@ -7,12 +7,7 @@ import './index.scss';
 export default function About() {
 	return (
 		<>
-			<Section>
-				<ThemeWrapper>
-					<TopBar />
-					<div>ABOUT ME PAGE</div>
-				</ThemeWrapper>
-			</Section>
+			<div>ABOUT ME PAGE</div>
 		</>
 	);
 }

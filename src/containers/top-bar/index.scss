@@ -5,6 +5,9 @@
 	align-items: center;
 	user-select: none;
 	padding-top: 32px;
+	position: fixed;
+	top: 0;
+	z-index: 10;
 
 	.topbar-abbreviation {
 		font-size: 22px;

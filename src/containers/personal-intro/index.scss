@@ -9,10 +9,11 @@
 		font-family: Azonix;
 		font-size: 80px;
 		user-select: none;
-		margin-top: 30%;
+		margin-top: 40%;
 
 		@include mobile {
 			font-size: 70px;
+			margin-top: 70%;
 		}
 	}
 
