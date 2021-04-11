@@ -7,10 +7,8 @@ import PersonalIntro from '../../containers/personal-intro';
 export default function Home() {
 	return (
 		<>
-			<ThemeWrapper>
-				<TopBar />
-				<PersonalIntro />
-			</ThemeWrapper>
+			<TopBar />
+			<PersonalIntro />
 		</>
 	);
 }

@@ -1,21 +1,28 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import PropTypes from 'prop-types';
 import SunIcon from '../../assets/images/theme-toggler/sun.svg';
 import MoonIcon from '../../assets/images/theme-toggler/moon.svg';
 import './index.scss';
 import MotionHoverScaleDrag from '../../components/MotionHoverScaleDrag';
 import { THEME_TYPE } from '../../constants';
+import ThemeContext from '../../contexts/ThemeContext';
 
-const Toggle = ({ theme, toggleTheme }) => {
-	const isDarkMode = theme.type == THEME_TYPE.DARK;
+const Toggle = () => {
+	return (
+		<ThemeContext.Consumer>
+			{(contextValue) => {
+				const isDarkMode = contextValue.theme == THEME_TYPE.DARK;
 
-	return <div onClick={toggleTheme}>{isDarkMode ? <SUN /> : <MOON />}</div>;
+				return (
+					<div onClick={contextValue.themeToggler}>
+						{isDarkMode ? <SUN /> : <MOON />}
+					</div>
+				);
+			}}
+		</ThemeContext.Consumer>
+	);
 };
-Toggle.propTypes = {
-	theme: PropTypes.object.isRequired,
-	toggleTheme: PropTypes.func.isRequired,
-};
+
 export default Toggle;
 
 const SUN = () => {

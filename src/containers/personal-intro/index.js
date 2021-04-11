@@ -32,19 +32,20 @@ const PersonalIntro = () => {
 		<div className="section">
 			<div className="personal-intro-text-container">
 				<div className="personal-intro-inner-container">
-					<div
-						className="personal-intro-title"
-						onClick={handleOnClick}
-						onMouseEnter={handleOnMouseEnter}
-						onMouseLeave={handleOnMouseLeave}
-					>
+					<div className="personal-intro-title">
 						<div className="personal-intro-top-subtitle">
 							portfolio <b>2021</b>
 						</div>
 
-						<MotionHoverScaleDrag>
-							<MyName />
-						</MotionHoverScaleDrag>
+						<span
+							onClick={handleOnClick}
+							onMouseEnter={handleOnMouseEnter}
+							onMouseLeave={handleOnMouseLeave}
+						>
+							<MotionHoverScaleDrag>
+								<MyName />
+							</MotionHoverScaleDrag>
+						</span>
 					</div>
 
 					{isSubtitleHovering && showBottomSubtitle && (
