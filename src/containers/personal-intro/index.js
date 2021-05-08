@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
-import { Controller, Scene } from 'react-scrollmagic';
-import { Tween, Timeline } from 'react-gsap';
 import MotionHoverScaleDrag from '../../components/MotionHoverScaleDrag';
+import Section from '../../components/Section';
+import { STATIC_TEXT } from '../../static-texts';
 import './index.scss';
 import MyName from './MyName';
 
@@ -28,13 +28,15 @@ const PersonalIntro = () => {
 		setIsSubtitleHovering((val) => !val);
 	};
 
+	const currentYear = new Date().getFullYear();
+
 	return (
-		<div className="section">
+		<Section>
 			<div className="personal-intro-text-container">
 				<div className="personal-intro-inner-container">
 					<div className="personal-intro-title">
 						<div className="personal-intro-top-subtitle">
-							portfolio <b>2021</b>
+							{STATIC_TEXT.HOME_PAGE.portfolioLabel} <b>{currentYear}</b>
 						</div>
 
 						<span
@@ -50,18 +52,18 @@ const PersonalIntro = () => {
 
 					{isSubtitleHovering && showBottomSubtitle && (
 						<div className="personal-intro-subtitle">
-							The JavaScript <span>Ninja</span>
+							{STATIC_TEXT.HOME_PAGE.introSubtitle1}
 						</div>
 					)}
 
 					{!isSubtitleHovering && showBottomSubtitle && (
 						<div className="personal-intro-subtitle">
-							Full Stack <b>Web / Mobile</b> Dev
+							{STATIC_TEXT.HOME_PAGE.introSubtitle2}
 						</div>
 					)}
 				</div>
 			</div>
-		</div>
+		</Section>
 	);
 };
 

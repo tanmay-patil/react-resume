@@ -54,6 +54,7 @@ body * {
 
 .bold {
 	font-weight: bold;
+	overflow: hidden;
 }
 
 a:link {
@@ -64,8 +65,4 @@ a:link {
 a:visited {
 	text-decoration: none;
 	color: currentColor;
-}
-
-.section {
-	min-height: 100vh;
 }

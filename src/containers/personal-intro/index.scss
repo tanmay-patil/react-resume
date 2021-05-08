@@ -3,17 +3,17 @@
 .personal-intro-text-container {
 	display: flex;
 	flex-direction: column;
-	@include flex-center;
+	height: 92vh;
+	align-items: center;
 
 	.personal-intro-title {
 		font-family: Azonix;
 		font-size: 80px;
 		user-select: none;
-		margin-top: 50%;
+		margin-top: 35%;
 
 		@include mobile {
 			font-size: 70px;
-			margin-top: 70%;
 		}
 	}
 
