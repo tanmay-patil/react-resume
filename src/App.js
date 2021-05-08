@@ -3,7 +3,6 @@ import './fonts.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Home from './pages/home';
-import About from './pages/about';
 import ThemeContext from './contexts/ThemeContext';
 import { useDarkMode } from './containers/theme-toggle/UseDarkMode';
 import { darkTheme, lightTheme } from './theme';
@@ -12,6 +11,7 @@ import { PAGE_NAMES, THEME_TYPE } from './constants';
 import TopBar from './containers/top-bar';
 import './index.scss';
 import { ScrollElement } from './components/ScrollElement';
+import Skills from './pages/skills';
 
 export default function App() {
 	const [theme, themeToggler] = useDarkMode();
@@ -33,7 +33,7 @@ export default function App() {
 					</ScrollElement>
 
 					<ScrollElement name={PAGE_NAMES.ABOUT}>
-						<About />
+						<Skills />
 					</ScrollElement>
 				</ScrollElement>
 			</div>

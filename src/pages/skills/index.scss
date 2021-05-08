@@ -1,0 +1,13 @@
+@import '../../sass-constants/mixins';
+
+.skills-container {
+	display: flex;
+	min-height: 92vh;
+	flex-direction: column;
+	align-items: center;
+}
+
+.coming-soon {
+	height: 500px;
+	width: 500px;
+}

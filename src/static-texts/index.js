@@ -18,4 +18,10 @@ export const STATIC_TEXT = {
 			</>
 		),
 	},
+	SKILLS_PAGE: {
+		pageTitle: {
+			primary: 'Skills',
+			secondary: 'कौशल',
+		},
+	},
 };
