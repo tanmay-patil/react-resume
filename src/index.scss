@@ -1,4 +1,7 @@
+@import './sass-constants/mixins';
+
 .render-main-body {
 	height: 92vh;
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 }

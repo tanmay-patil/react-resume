@@ -1,5 +1,3 @@
-import * as Scroll from 'react-scroll';
-
 export const emptyArrowFunction = () => {
 	/** */
 };
@@ -18,12 +16,3 @@ const isMobileFn = () => {
 };
 
 export const isMobile = isMobileFn();
-
-export const reactScrollToPage = (pageName) => {
-	Scroll.scroller.scrollTo(pageName, {
-		duration: 800,
-		delay: 0,
-		smooth: 'easeInOutQuart',
-		containerId: 'scroll-container',
-	});
-};

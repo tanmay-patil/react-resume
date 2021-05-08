@@ -5,6 +5,41 @@
 	flex-direction: column;
 	height: 92vh;
 	align-items: center;
+	position: relative;
+
+	.img-orbit {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: -16.6666vw;
+		left: 50%;
+		width: 400vw;
+		height: 240rem;
+		height: 400vw;
+		margin-left: -120rem;
+		margin-left: -200vw;
+		z-index: -1;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		animation-name: spin;
+		animation-duration: 400000ms;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+
+		@include mobile {
+			display: none;
+		}
+	}
+
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
 
 	.personal-intro-title {
 		font-family: Azonix;

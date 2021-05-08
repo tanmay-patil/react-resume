@@ -12,3 +12,10 @@
 		@content;
 	}
 }
+
+// Media Queries
+@mixin deskkop {
+	@media (min-width: 700px) {
+		@content;
+	}
+}

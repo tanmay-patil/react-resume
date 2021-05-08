@@ -3,6 +3,8 @@ export const STATIC_TEXT = {
 	myFullName: 'Tanmay Vijayrao Patil',
 	myFirstName: 'Tanmay',
 	myLastName: 'Patil',
+	workExperienceHighlight:
+		'As a developer , I am a cumulation of the unique experiences gained from every single project displayed below. ',
 	HOME_PAGE: {
 		portfolioLabel: 'portfolio',
 		introSubtitle1: (

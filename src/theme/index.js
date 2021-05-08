@@ -24,6 +24,6 @@ export const lightTheme = {
 };
 export const darkTheme = {
 	text: '#d2c9c4',
-	background: '#030407',
+	background: 'black',
 	type: THEME_TYPE.DARK,
 };
