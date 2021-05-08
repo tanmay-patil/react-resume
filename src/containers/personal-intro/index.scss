@@ -8,9 +8,8 @@
 	position: relative;
 
 	.img-orbit {
-		content: '';
 		display: block;
-		position: absolute;
+		position: fixed;
 		bottom: -16.6666vw;
 		left: 50%;
 		width: 400vw;
@@ -28,7 +27,12 @@
 		animation-timing-function: linear;
 
 		@include mobile {
-			display: none;
+			bottom: 59.3334vw;
+			left: -44%;
+			width: 601vw;
+			height: 537vw;
+			margin-left: -208vw;
+			animation-duration: 200000ms;
 		}
 	}
 
